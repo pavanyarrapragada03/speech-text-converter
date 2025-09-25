@@ -123,7 +123,7 @@ class SpeechToTextConverter:
                     audio = self.recognizer.listen(source, timeout=1, phrase_time_limit=5)
                     
                     # Recognize speech using Google's speech recognition
-                    text = self.recognizer.recognize_google(audio)
+                   text = self.recognizer.recognize_sphinx(audio)
                     
                     # Update text display in the main thread
                     self.root.after(0, self.update_text_display, text + " ")
